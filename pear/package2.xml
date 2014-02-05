@@ -44,6 +44,21 @@
 	<changelog>
 		<release xmlns="">
                     <version>
+                        <release>0.3.12</release>
+                        <api>0.3.1</api>
+                    </version>
+                    <stability>
+                        <release>beta</release>
+                        <api>beta</api>
+                    </stability>
+                    <date>2014-02-05</date>
+                    <license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+                    <notes>
+                        Publish on GitHub
+                    </notes>
+                </release>
+<release xmlns="">
+                    <version>
                         <release>0.3.11</release>
                         <api>0.3.1</api>
                     </version>
@@ -345,43 +360,7 @@ and PEAR_Command_Mage_ConfigHelperGenerator::generateHelper()
 			</stability>
 			<date>2011-06-09</date>
 			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
-			<notes>
-(English version below)
-
-DE:
-
-- Als Lowercase Modul-Alias wird nun durchgängig [namespace]_[module] 
-verwendet, also bspw. wmf_theme, anstatt wie zuvor nur [module], 
-also bspw. nur "theme". Dies macht die Modulnamen eindeutiger.
-
-- Das Tab für die Modul-Konfigurationssektion in der system.xml 
-wird nun dynamisch anhand von [Namespace] und [namespace] generiert, 
-anstatt wie zuvor immer fix "TechDivision" bzw. "techdivision" zu verwenden.
-
-- Es wurde im Modul-Stub eine Klasse Helper/Config.php hinzugefügt, 
-welche standardmäßig von der Abstrakten Config-Helperklasse ableitet, 
-die wiederum automatisch beim Build und Deployment generiert wird.
-
-- Es wurde ein PEAR-Command hinzugefügt, welches den Generierungsprozess 
-des Abstract Config-Helpers ermöglicht.
-
-- Es wurden in die Block, Model und ResourceModel Abstract-Klassen 
-Funktionen zum Direktaufruf der Configuration eingefügt. Somit ist 
-es standardmäßig möglich, in allen Modul-Blöcken, Models oder 
-ResourceModels mittels bspw. $this-&gt;getConfig()-&gt;getServiceUrl() 
-direkt und vor allem mit IDE-Unterstützung (da generiert, und 
-nicht dynamisch als Magic-Method) auf die Konfigurationswerte 
-lesend zuzugreifen.
-
-- Die Konfigurationssektion "Allgemein" wurde zwecks 
-Internationalisierung in "General umbenannt.
-
-- Es wurden für de_DE sowie für en_US jeweils die locale-CSV-
-Dateien im Modul-Stub angelegt
-
-
-
-		        EN:                
+			<notes>               
 		        - The lowercase module alias is now consistently [namespace]_[module],
 		        instead of just [module] as before. This grants better uniqueness of names.
 		
