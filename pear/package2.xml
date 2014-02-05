@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0"
+	xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	packagerversion="1.7.1" version="2.0"
+	xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+	<name>${ant.project.name}</name>
+	<channel>${pear.channel}</channel>
+	<summary>Commands mage-package, mage-project and generate-contents</summary>
+	<description>This commands improves the default package command by the 
+			possibility to create Magento extensions and a command to 
+			initialize a new project to implement a Magento extension,
+			and offers some tools used in the build / deployment process.
+		</description>
+	<lead>
+		<name>Tim Wagner</name>
+		<user>wagnert</user>
+		<email>tw@techdivision.com</email>
+		<active>yes</active>
+	</lead>
+	<date>${actual.date}</date>
+	<time>${actual.time}</time>
+	<version>
+		<release>${release.version}</release>
+		<api>${api.version}</api>
+	</version>
+	<stability>
+		<release>${release.stability}</release>
+		<api>${api.stability}</api>
+	</stability>
+	<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+	<notes>Publishing on GitHub</notes>
+	<contents>
+		<dir name="/" />
+	</contents>
+	<dependencies>
+		<required>
+			<php>
+				<min>5.2.0</min>
+				<max>6.0</max>
+			</php>
+			<pearinstaller>
+				<min>1.6.2</min>
+			</pearinstaller>
+		</required>
+	</dependencies>
+	<phprelease />
+	<changelog>
+		<release>
+			<version>
+				<release>0.3.8</release>
+				<api>0.3.1</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2011-10-28</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Added targets for magento instance update from backup files.
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.3.4</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2011-08-17</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Bugfix in package2.xml due to renamed channel.url properties in build properties file.
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.3.3</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-08-05</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Added compatibilty for Windows
+- Added Template Setup class and Template sql upgrade script in mage-project stub generator.
+        		- Refactored build.default.properties and build.xml in mage-project stub generator.
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.3.2</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-07-01</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Fixed magento prefix bug in build.xml; prefix was also used for sample data
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.3.1</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-06-27</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Added configurable prefix for magento instance installation
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.3.0</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-06-27</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Removed deprecated phpunit-to-hudson.xsl
+- Fixed legacy &quot;init&quot; task to use new extract logic
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.2.9</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-06-24</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Fixed system.xml bug, namespace not correctly mentioned in config tab
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.2.8</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-06-20</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Marked Model, Resource Model and Block abstract classes correctly as abstract
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.2.7</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-06-15</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Added translate-handles for inclusion of translate csv files in config.xml
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.2.6</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-06-14</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Fixed duplicate content, explicit naming of $codepool contents in build.xml
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.2.5</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-06-14</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Fixed wrong class comment blocks in DummyTest.php
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.2.4</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-06-14</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Fixed DummyTest.php Integration in build.xml ant task run-tests
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.2.3</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-06-09</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Added several ant-targets to enable out of the box integration of
+newly generated modules into the Jenkins Continous Integration Suite
+
+- phpmd: PHP Mess Detector
+- phpcpd: PHP Copy and Paste detection
+- phploc: PHP Lines of Code
+- phpcs: PHP Code Sniffer
+
+- Fixed ant target pdepend for Jenkins integration
+
+- Added PHPUnit DummyTest.php for correct Jenkins Integration
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.2.2</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-06-09</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Bugfix in Abstract Block Template: missing &lt; before Namespace Tag
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.2.1</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-06-09</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Bugfix for Helper_Data / Helper_Config: Names were changed
+
+- Removed direct config access via $this-&gt;getConfig vom abstract classes due to potential
+compatibility and stability issues. Config access now exclusively via 
+e.g. Mage::helper(&apos;module/config&apos;)-&gt;getServiceUrl()
+
+- Added code comments for PEAR_Command_Mage_ConfigHelperGenerator::_generate()
+and PEAR_Command_Mage_ConfigHelperGenerator::generateHelper()
+
+- Fixed formating of nested if-statements in PEAR_Command_Mage_ConfigHelperGenerator::generateHelper()
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.2.0</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2011-06-09</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+(English version below)
+
+DE:
+
+- Als Lowercase Modul-Alias wird nun durchgängig [namespace]_[module] 
+verwendet, also bspw. wmf_theme, anstatt wie zuvor nur [module], 
+also bspw. nur &quot;theme&quot;. Dies macht die Modulnamen eindeutiger.
+
+- Das Tab für die Modul-Konfigurationssektion in der system.xml 
+wird nun dynamisch anhand von [Namespace] und [namespace] generiert, 
+anstatt wie zuvor immer fix &quot;TechDivision&quot; bzw. &quot;techdivision&quot; zu verwenden.
+
+- Es wurde im Modul-Stub eine Klasse Helper/Config.php hinzugefügt, 
+welche standardmäßig von der Abstrakten Config-Helperklasse ableitet, 
+die wiederum automatisch beim Build und Deployment generiert wird.
+
+- Es wurde ein PEAR-Command hinzugefügt, welches den Generierungsprozess 
+des Abstract Config-Helpers ermöglicht.
+
+- Es wurden in die Block, Model und ResourceModel Abstract-Klassen 
+Funktionen zum Direktaufruf der Configuration eingefügt. Somit ist 
+es standardmäßig möglich, in allen Modul-Blöcken, Models oder 
+ResourceModels mittels bspw. $this-&gt;getConfig()-&gt;getServiceUrl() 
+direkt und vor allem mit IDE-Unterstützung (da generiert, und 
+nicht dynamisch als Magic-Method) auf die Konfigurationswerte 
+lesend zuzugreifen.
+
+- Die Konfigurationssektion &quot;Allgemein&quot; wurde zwecks 
+Internationalisierung in &quot;General umbenannt.
+
+- Es wurden für de_DE sowie für en_US jeweils die locale-CSV-
+Dateien im Modul-Stub angelegt
+
+
+
+		        EN:                
+		        - The lowercase module alias is now consistently [namespace]_[module],
+		        instead of just [module] as before. This grants better uniqueness of names.
+		
+		        - The System-Config-Tab of the Module is now dynamically generated using
+		        [Namespace] and [namespace], instead of statically using TechDivision and techdivision
+		
+		        - The module stub has been extended by a class file Helper/Config.php, which
+		        does extend the abstract config helper classfile, which in turn will be
+		        automatically generated with each build / deploy.
+		
+		        - A PEAR-Command was added which generates the abstract config helper class
+		
+		        - Block and (Resource-)Model abstract classes have been extended with some
+		        functions to grant convenient access to the module&apos;s config helper, using statements
+		        like $this-&gt;getConfig()-&gt;getServiceUrl(). Moreover, as the helper class file is
+		        generated instead of dynamic with magic-methods, you can use the code-assist
+		        feature of your IDE to access config properties.
+		
+		        - The configuration section &quot;Allgemein&quot; has been renamed to &quot;General&quot; for 
+		        internationalization reasons
+		
+		        - The folders app/locale/de_DE and app/locale/en_US have been added to the
+		        module stub, as well as two dummy CSV translation files
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.1.16</release>
+				<api>0.0.4</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2011-03-25</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Refactoring and updating projekt stub for mage-project command
+- Implementing codepool feature for mage-project command
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.1.15</release>
+				<api>0.0.3</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2010-12-20</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Bugfix create instance.tmp.dir before getting instance sources
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.1.14</release>
+				<api>0.0.3</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2010-12-17</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Enhanced mage-project stub generator for magento enterprise instance creation
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.1.13</release>
+				<api>0.0.3</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2010-11-26</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Bugfix in ContentsGenerator, now also correctly handles module directories with names meaning roles (&quot;skin&quot;, &quot;lib&quot;, etc..).
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.1.12</release>
+				<api>0.0.3</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2010-03-29</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Bugfix on changelog input message. Implementing standard value on return.
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.1.11</release>
+				<api>0.0.3</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2010-03-29</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Bugfix on changelog input message to be required
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.1.10</release>
+				<api>0.0.3</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2010-03-29</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Added release-version task to build.xml on mage-project stub
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.1.8</release>
+				<api>0.0.3</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2010-03-29</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Add missing method splitVersionRange() to class class.em_index.php
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.1.7</release>
+				<api>0.0.3</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2010-03-29</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Fixed shortcut on t3x-command
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.1.1</release>
+				<api>0.0.2</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2010-03-29</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Refactored mage-project command and project-stub
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.1.0</release>
+				<api>0.0.2</api>
+			</version>
+			<stability>
+				<release>stable</release>
+				<api>stable</api>
+			</stability>
+			<date>2010-02-26</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Adding new Commands for creating a T3X-File and updating em_conf.php in TYPO3 Extensions
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.0.9</release>
+				<api>0.0.2</api>
+			</version>
+			<stability>
+				<release>beta</release>
+				<api>beta</api>
+			</stability>
+			<date>2010-02-26</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Adding new Commands for updating em_conf.php in TYPO3 Extensions
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.0.8</release>
+				<api>0.0.2</api>
+			</version>
+			<stability>
+				<release>beta</release>
+				<api>beta</api>
+			</stability>
+			<date>2010-02-25</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Adding new Commands for creating TYPO3 T3X-Files
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.0.7</release>
+				<api>0.0.2</api>
+			</version>
+			<stability>
+				<release>beta</release>
+				<api>beta</api>
+			</stability>
+			<date>2009-12-14</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Bugfixing invalid buildpath
+- Refactoring package2.xml
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.0.6</release>
+				<api>0.0.2</api>
+			</version>
+			<stability>
+				<release>beta</release>
+				<api>beta</api>
+			</stability>
+			<date>2009-12-05</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Adding new Command generate-contents to generate automatially contents node package2.xml
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.0.5</release>
+				<api>0.0.2</api>
+			</version>
+			<stability>
+				<release>beta</release>
+				<api>beta</api>
+			</stability>
+			<date>2009-11-27</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Fixing bug to avoid copying wrong templates to target directory
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.0.4</release>
+				<api>0.0.2</api>
+			</version>
+			<stability>
+				<release>beta</release>
+				<api>beta</api>
+			</stability>
+			<date>2009-11-26</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Removing version propery from build.xml
+- Switching to beta stability
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.0.3</release>
+				<api>0.0.2</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2009-11-25</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Adding licence to source templates
+- Refactoring PHPUnit TestSuite
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.0.2</release>
+				<api>0.0.2</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2009-11-25</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Adding new Command mage-project to create a new empty Extension
+   </notes>
+		</release>
+		<release>
+			<version>
+				<release>0.0.1</release>
+				<api>0.0.1</api>
+			</version>
+			<stability>
+				<release>alpha</release>
+				<api>alpha</api>
+			</stability>
+			<date>2009-10-12</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+- Some fixes
+   </notes>
+		</release>
+	</changelog>
+</package>

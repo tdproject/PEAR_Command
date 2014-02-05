@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * License: GNU General Public License
+ *
+ * Copyright (c) 2011 TechDivision GmbH. All rights reserved.
+ * Note: Original work copyright to respective authors
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @category   [Namespace]
+ * @package    [Namespace]_[Module]
+ * @subpackage Config
+ * @copyright  Copyright (c) 1996-2011 TechDivision GmbH (http://www.techdivision.com)
+ * @license    http://www.gnu.org/licenses/gpl.html GPL, version 3
+ * @version    $Id:$
+ * @link       http://www.techdivision.com
+ * @since      File available since Release 0.1.0
+ * @author     TechDivision Core Team <core@techdivision.com>
+ */
+
+/**
+ * Modules configuration file. 
+ *
+ * @category   [Namespace]
+ * @package    [Namespace]_[Module]
+ * @subpackage Config
+ * @copyright  Copyright (c) 1996-2011 TechDivision GmbH (http://www.techdivision.com)
+ * @license    http://www.gnu.org/licenses/gpl.html GPL, version 3
+ * @version    Release: @package_version@
+ * @since      Class available since Release 0.1.0
+ * @author     TechDivision Core Team <core@techdivision.com>
+ */
+ -->
+<config>
+    <modules>
+        <[Namespace]_[Module]>
+            <version>${release.version}</version>
+        </[Namespace]_[Module]>
+    </modules>
+    <frontend>
+        <translate>
+            <modules>
+                <[namespace]_[module]>
+                    <files>
+                        <default>[Namespace]_[Module].csv</default>
+                    </files>
+                </[namespace]_[module]>
+            </modules>
+        </translate>
+        <routers>
+            <[namespace]_[module]>
+                <use>standard</use>
+                <args>
+                    <module>[Namespace]_[Module]</module>
+                    <frontName>[namespace]_[module]</frontName>
+                </args>
+            </[namespace]_[module]>
+        </routers>
+        <layout>
+            <updates>
+                <[namespace]_[module]>
+                    <file>[namespace]/[module].xml</file>
+                </[namespace]_[module]>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+			<[namespace]_[module]>
+				<use>admin</use>
+				<args>
+					<module>[Namespace]_[Module]</module>
+					<frontName>admin_[namespace]_[module]</frontName>
+				</args>
+			</[namespace]_[module]>
+        </routers>
+    </admin>
+    <adminhtml>
+        <translate>
+            <modules>
+                <[namespace]_[module]>
+                    <files>
+                        <default>[Namespace]_[Module].csv</default>
+                    </files>
+                </[namespace]_[module]>
+            </modules>
+        </translate>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<[namespace]_[module] translate="title" module="[namespace]_[module]">
+											<title>[Module]</title>
+											<sort_order>50</sort_order>
+										</[namespace]_[module]>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<[namespace]_[module]>
+					<file>[namespace]/[module].xml</file>
+				</[namespace]_[module]>
+			</updates>
+		</layout>
+    </adminhtml>   
+    <global>
+        <models>
+            <[namespace]_[module]>
+                <class>[Namespace]_[Module]_Model</class>
+                <resourceModel>[namespace]_[module]_resource</resourceModel>
+            </[namespace]_[module]>
+            <[namespace]_[module]_resource>
+                <class>[Namespace]_[Module]_Model_Resource</class>
+                <entities/>
+            </[namespace]_[module]_resource>
+        </models>
+        <resources>
+            <[namespace]_[module]_setup>
+                <setup>
+                    <module>[Namespace]_[Module]</module>
+                    <class>[Namespace]_[Module]_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </[namespace]_[module]_setup>
+            <[namespace]_[module]_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </[namespace]_[module]_write>
+            <[namespace]_[module]_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </[namespace]_[module]_read>
+        </resources>
+        <blocks>
+            <[namespace]_[module]>
+                <class>[Namespace]_[Module]_Block</class>
+            </[namespace]_[module]>
+        </blocks>
+        <helpers>
+            <[namespace]_[module]>
+                <class>[Namespace]_[Module]_Helper</class>
+            </[namespace]_[module]>
+        </helpers>
+    </global>
+</config>

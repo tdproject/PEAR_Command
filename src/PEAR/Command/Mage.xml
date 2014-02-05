@@ -1,0 +1,121 @@
+<commands version="1.0">
+	<mage-package>
+		<summary>Build Magento Package</summary>
+		<function>doPackage</function>
+		<shortcut>mp</shortcut>
+		<options>
+			<targetdir>
+				<shortopt>T</shortopt>
+				<doc>Target directory for package file.</doc>
+				<arg>TARGETDIR</arg>
+			</targetdir>
+		</options>
+		<doc>[descfile] Creates a Magento specific PEAR package from its description file.</doc>
+	</mage-package>
+	<mage-project>
+		<summary>Create folder structure and configuration files for a Magento extension</summary>
+		<function>doProject</function>
+		<shortcut>mpr</shortcut>
+		<options>
+			<targetdir>
+				<shortopt>T</shortopt>
+				<doc>Target directory for folder sturcture and configuration files.
+				</doc>
+				<arg>TARGETDIR</arg>
+			</targetdir>
+			<module>
+				<shortopt>M</shortopt>
+				<doc>Name of Extension to create.</doc>
+				<arg>MODULE</arg>
+			</module>
+			<namespace>
+				<shortopt>N</shortopt>
+				<doc>Namespace of Extension.</doc>
+				<arg>NAMESPACE</arg>
+			</namespace>
+			<interface>
+				<shortopt>I</shortopt>
+				<doc>Name of Interface to use.</doc>
+				<arg>INTERFACE</arg>
+			</interface>
+			<theme>
+				<shortopt>Z</shortopt>
+				<doc>Name of Theme to use.</doc>
+				<arg>THEME</arg>
+			</theme>
+			<codepool>
+				<shortopt>C</shortopt>
+				<doc>Name of CodePool to use (core/community/local).</doc>
+				<arg>CODEPOOL</arg>
+			</codepool>
+		</options>
+		<doc>[descfile] Creates the basic folder structur and configuration files for a Magento extension.</doc>
+	</mage-project>
+	<generate-config-helper>
+		<summary>Generates config helper class file from system.xml</summary>
+		<function>doGenerateConfigHelper</function>
+		<shortcut>mgch</shortcut>
+		<options>
+			<targetdir>
+				<shortopt>T</shortopt>
+				<doc>Target directory for saving generated output.
+				</doc>
+				<arg>TARGETDIR</arg>
+			</targetdir>
+			<module>
+				<shortopt>M</shortopt>
+				<doc>Name of Extension.</doc>
+				<arg>MODULE</arg>
+			</module>
+			<namespace>
+				<shortopt>N</shortopt>
+				<doc>Namespace of Extension.</doc>
+				<arg>NAMESPACE</arg>
+			</namespace>
+			<interface>
+				<shortopt>I</shortopt>
+				<doc>Name of Interface to use.</doc>
+				<arg>INTERFACE</arg>
+			</interface>
+			<theme>
+				<shortopt>Z</shortopt>
+				<doc>Name of Theme to use.</doc>
+				<arg>THEME</arg>
+			</theme>
+			<codepool>
+				<shortopt>C</shortopt>
+				<doc>Name of CodePool to use (core/community/local).</doc>
+				<arg>CODEPOOL</arg>
+			</codepool>
+		</options>
+		<doc>[descfile] Generates the abstract module configuration helper class file from the options in system.xml.</doc>
+	</generate-config-helper>
+	<generate-contents>
+		<summary>Generates contents node in package2.xml</summary>
+		<function>doGenerateContents</function>
+		<shortcut>mgc</shortcut>
+		<options>
+			<templatefile>
+				<shortopt>T</shortopt>
+				<doc>Path to template package2.xml</doc>
+				<arg>TEMPLATEFILE</arg>
+			</templatefile>
+			<srcdir>
+				<shortopt>S</shortopt>
+				<doc>Path to source code folder.</doc>
+				<arg>SRCDIR</arg>
+			</srcdir>
+			<destinationdir>
+				<shortopt>D</shortopt>
+				<doc>Path to destination folder where to save the generated package2.xml</doc>
+				<arg>DESTINATIONDIR</arg>
+			</destinationdir>
+			<modulename>
+				<shortopt>M</shortopt>
+				<doc>Name of the Module.</doc>
+				<arg>MODULENAME</arg>
+			</modulename>
+		</options>
+		<doc>[descfile] Generates the contents node in a template package2.xml file.</doc>
+	</generate-contents>	
+</commands>

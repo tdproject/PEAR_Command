@@ -1,0 +1,43 @@
+<commands version="1.0">
+	<t3x-create>
+		<summary>Create TYPO3 Extension file</summary>
+		<function>createT3X</function>
+		<shortcut>tcr</shortcut>
+		<options>
+			<extkey>
+				<shortopt>E</shortopt>
+				<doc>The key of the TYPO3 Extension</doc>
+				<arg>EXTKEY</arg>
+			</extkey>
+			<inputpath>
+				<shortopt>I</shortopt>
+				<doc>The input folder which will be parsed</doc>
+				<arg>INPUTPATH</arg>
+			</inputpath>
+			<outputpath>
+				<shortopt>O</shortopt>
+				<doc>The output folder which will be parsed</doc>
+				<arg>OUTPUTPATH</arg>
+			</outputpath>
+		</options>
+		<doc>[descfile] Creates a valid t3x-file from a sourcefolder</doc>
+	</t3x-create>
+	<t3x-update-emconf>
+		<summary>Update em_conf.php from an existing Extension</summary>
+		<function>updateEmConf</function>
+		<shortcut>tcru</shortcut>
+		<options>
+			<extkey>
+				<shortopt>E</shortopt>
+				<doc>The key of the TYPO3 Extension</doc>
+				<arg>EXTKEY</arg>
+			</extkey>
+			<inputpath>
+				<shortopt>P</shortopt>
+				<doc>The folder where the em_conf.php residess</doc>
+				<arg>PATH</arg>
+			</inputpath>
+		</options>
+		<doc>[descfile] Updates the em_conf.php of an extension</doc>
+	</t3x-update-emconf>
+</commands>
