@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<package xmlns="http://pear.php.net/dtd/package-2.0"
-	xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	packagerversion="1.7.1" version="2.0"
-	xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.7.1" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
 	<name>${ant.project.name}</name>
 	<channel>${pear.channel}</channel>
 	<summary>Commands mage-package, mage-project and generate-contents</summary>
@@ -28,9 +25,9 @@
 		<api>${api.stability}</api>
 	</stability>
 	<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
-	<notes>Publishing on GitHub</notes>
+	<notes>Publish on GitHub</notes>
 	<contents>
-		<dir name="/" />
+		<dir name="/"/>
 	</contents>
 	<dependencies>
 		<required>
@@ -43,9 +40,24 @@
 			</pearinstaller>
 		</required>
 	</dependencies>
-	<phprelease />
+	<phprelease/>
 	<changelog>
-		<release>
+		<release xmlns="">
+                    <version>
+                        <release>0.3.9</release>
+                        <api>0.3.1</api>
+                    </version>
+                    <stability>
+                        <release>beta</release>
+                        <api>beta</api>
+                    </stability>
+                    <date>2014-02-05</date>
+                    <license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+                    <notes>
+                        Publish on GitHub
+                    </notes>
+                </release>
+<release>
 			<version>
 				<release>0.3.8</release>
 				<api>0.3.1</api>
@@ -135,7 +147,7 @@
 			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
 			<notes>
 - Removed deprecated phpunit-to-hudson.xsl
-- Fixed legacy &quot;init&quot; task to use new extract logic
+- Fixed legacy "init" task to use new extract logic
    </notes>
 		</release>
 		<release>
@@ -284,7 +296,7 @@ newly generated modules into the Jenkins Continous Integration Suite
 
 - Removed direct config access via $this-&gt;getConfig vom abstract classes due to potential
 compatibility and stability issues. Config access now exclusively via 
-e.g. Mage::helper(&apos;module/config&apos;)-&gt;getServiceUrl()
+e.g. Mage::helper('module/config')-&gt;getServiceUrl()
 
 - Added code comments for PEAR_Command_Mage_ConfigHelperGenerator::_generate()
 and PEAR_Command_Mage_ConfigHelperGenerator::generateHelper()
@@ -308,33 +320,33 @@ and PEAR_Command_Mage_ConfigHelperGenerator::generateHelper()
 
 DE:
 
-- Als Lowercase Modul-Alias wird nun durchg√§ngig [namespace]_[module] 
+- Als Lowercase Modul-Alias wird nun durchgängig [namespace]_[module] 
 verwendet, also bspw. wmf_theme, anstatt wie zuvor nur [module], 
-also bspw. nur &quot;theme&quot;. Dies macht die Modulnamen eindeutiger.
+also bspw. nur "theme". Dies macht die Modulnamen eindeutiger.
 
-- Das Tab f√ºr die Modul-Konfigurationssektion in der system.xml 
+- Das Tab für die Modul-Konfigurationssektion in der system.xml 
 wird nun dynamisch anhand von [Namespace] und [namespace] generiert, 
-anstatt wie zuvor immer fix &quot;TechDivision&quot; bzw. &quot;techdivision&quot; zu verwenden.
+anstatt wie zuvor immer fix "TechDivision" bzw. "techdivision" zu verwenden.
 
-- Es wurde im Modul-Stub eine Klasse Helper/Config.php hinzugef√ºgt, 
-welche standardm√§√üig von der Abstrakten Config-Helperklasse ableitet, 
+- Es wurde im Modul-Stub eine Klasse Helper/Config.php hinzugefügt, 
+welche standardmäßig von der Abstrakten Config-Helperklasse ableitet, 
 die wiederum automatisch beim Build und Deployment generiert wird.
 
-- Es wurde ein PEAR-Command hinzugef√ºgt, welches den Generierungsprozess 
-des Abstract Config-Helpers erm√∂glicht.
+- Es wurde ein PEAR-Command hinzugefügt, welches den Generierungsprozess 
+des Abstract Config-Helpers ermöglicht.
 
 - Es wurden in die Block, Model und ResourceModel Abstract-Klassen 
-Funktionen zum Direktaufruf der Configuration eingef√ºgt. Somit ist 
-es standardm√§√üig m√∂glich, in allen Modul-Bl√∂cken, Models oder 
+Funktionen zum Direktaufruf der Configuration eingefügt. Somit ist 
+es standardmäßig möglich, in allen Modul-Blöcken, Models oder 
 ResourceModels mittels bspw. $this-&gt;getConfig()-&gt;getServiceUrl() 
-direkt und vor allem mit IDE-Unterst√ºtzung (da generiert, und 
+direkt und vor allem mit IDE-Unterstützung (da generiert, und 
 nicht dynamisch als Magic-Method) auf die Konfigurationswerte 
 lesend zuzugreifen.
 
-- Die Konfigurationssektion &quot;Allgemein&quot; wurde zwecks 
-Internationalisierung in &quot;General umbenannt.
+- Die Konfigurationssektion "Allgemein" wurde zwecks 
+Internationalisierung in "General umbenannt.
 
-- Es wurden f√ºr de_DE sowie f√ºr en_US jeweils die locale-CSV-
+- Es wurden für de_DE sowie für en_US jeweils die locale-CSV-
 Dateien im Modul-Stub angelegt
 
 
@@ -353,12 +365,12 @@ Dateien im Modul-Stub angelegt
 		        - A PEAR-Command was added which generates the abstract config helper class
 		
 		        - Block and (Resource-)Model abstract classes have been extended with some
-		        functions to grant convenient access to the module&apos;s config helper, using statements
+		        functions to grant convenient access to the module's config helper, using statements
 		        like $this-&gt;getConfig()-&gt;getServiceUrl(). Moreover, as the helper class file is
 		        generated instead of dynamic with magic-methods, you can use the code-assist
 		        feature of your IDE to access config properties.
 		
-		        - The configuration section &quot;Allgemein&quot; has been renamed to &quot;General&quot; for 
+		        - The configuration section "Allgemein" has been renamed to "General" for 
 		        internationalization reasons
 		
 		        - The folders app/locale/de_DE and app/locale/en_US have been added to the
@@ -423,7 +435,7 @@ Dateien im Modul-Stub angelegt
 			<date>2010-11-26</date>
 			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
 			<notes>
-- Bugfix in ContentsGenerator, now also correctly handles module directories with names meaning roles (&quot;skin&quot;, &quot;lib&quot;, etc..).
+- Bugfix in ContentsGenerator, now also correctly handles module directories with names meaning roles ("skin", "lib", etc..).
    </notes>
 		</release>
 		<release>
