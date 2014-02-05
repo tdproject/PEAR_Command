@@ -44,7 +44,7 @@
 	<changelog>
 		<release xmlns="">
                     <version>
-                        <release>0.3.9</release>
+                        <release>0.3.10</release>
                         <api>0.3.1</api>
                     </version>
                     <stability>
@@ -57,7 +57,22 @@
                         Publish on GitHub
                     </notes>
                 </release>
-<release>
+<release xmlns="">
+			<version>
+				<release>0.3.9</release>
+				<api>0.3.1</api>
+			</version>
+			<stability>
+				<release>beta</release>
+				<api>beta</api>
+			</stability>
+			<date>2014-02-05</date>
+			<license uri="http://www.gnu.org/licenses/gpl-2.0.html">GPL, version 2.0</license>
+			<notes>
+                        Publish on GitHub
+                    </notes>
+		</release>
+		<release>
 			<version>
 				<release>0.3.8</release>
 				<api>0.3.1</api>
